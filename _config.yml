@@ -1,0 +1,67 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Me, BSD
+email: jake@mebsd.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "mebsd.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+logo: "/assets/images/logo.png"
+
+# Build settings
+collections:
+  apps:
+    permalink: ":/collection/:path/"
+    output: true
+  freebsd:
+    permalink: "/:collection/:path/"
+    output: true
+  cisco:
+    permalink: "/:collection/:path/"
+    output: true
+  code:
+    permalink: "/:collection/:path/"
+    output: true
+
+remote_theme: pmarsceill/just-the-docs
+
+just_the_docs:
+  collections:
+    freebsd:
+      name: FreeBSD
+      search_exclude: false
+    apps:
+      name: Apps
+      search_exclude: fals
+    code:
+      name: Code
+      search_exclude: false
+    cisco:
+      name: Cisco
+      search_exclude: false
+plugins:
+  - jekyll-feed
+
+color_scheme: mebsd
