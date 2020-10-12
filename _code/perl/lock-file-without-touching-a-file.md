@@ -35,5 +35,3 @@ INIT{
     or die "$0 is already running somewhere!n";
 }
 ```
-
-Give it a try :)
