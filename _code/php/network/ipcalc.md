@@ -22,7 +22,7 @@ tags:
 # PHP IP Calculator
 ## Coding with subnets and IP addresses
 
-Ipcalc (`net-mgmt/ipcalc`) is a handy tool for doing all sorts of calculations on IPs and subnets, but calling exec on a CLI tool and parsing the output is not always ideal.
+Ipcalc `net-mgmt/ipcalc` is a handy tool for doing all sorts of calculations on IPs and subnets, but calling exec on a CLI tool and parsing the output is not always ideal.
 
 Working with IP addresses is pretty easy, with the right formular you can get any of information you need. In this post I am going to share some PHP methods for IP address calculation.
 
