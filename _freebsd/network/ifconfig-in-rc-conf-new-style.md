@@ -1,6 +1,6 @@
 ---
 id: 306
-title: 'FreeBSD: New improved rc.conf syntax for IPv4 ifconfig alias'
+title: 'New rc.conf syntax IPv4 ifconfig alias'
 date: 2015-03-02T15:39:19+00:00
 author: Jake
 layout: default
