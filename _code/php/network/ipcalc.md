@@ -19,7 +19,8 @@ tags:
   - programming
   - subnet
 ---
-# PHP IP Calculator: Coding with subnets and IP addresses
+# PHP IP Calculator
+## Coding with subnets and IP addresses
 
 Perhaps you have an IP and you need to find out if it's part of a subnet, or what the network address is of a subnet. You could use ipcalc (net-mgmt/ipcalc), a handy tool for doing all sorts of calculations on IPs and subnets, but calling exec on a CLI tool and parsing the output is not always ideal.
 
