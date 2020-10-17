@@ -21,42 +21,44 @@ tags:
 ---
 # PHP IP Calculator: Coding with subnets and IP addresses
 
-Working with IP address and subnets in code is a day to day task for a network administrator. Say you have an IP and you need to find out if it's part of a subnet, or what the network address is of a subnet, what's the best way? In the past I would reach for ipcalc (net-mgmt/ipcalc), a handy little tool for doing all sorts of calculations on IPs and subnets, but calling exec on a CLI tool and parsing the output is not exactly efficient.
+Perhaps you have an IP and you need to find out if it's part of a subnet, or what the network address is of a subnet. You could use ipcalc (net-mgmt/ipcalc), a handy tool for doing all sorts of calculations on IPs and subnets, but calling exec on a CLI tool and parsing the output is not always ideal.
 
-The truth is, working with IP addresses is pretty easy, with the right formular you can get any of information you need. In this post I am going to share a little PHP class with some of my favourite IP address calculation methods. Cue the PHP IP calculator.
+Working with IP addresses is pretty easy, with the right formular you can get any of information you need. In this post I am going to share some PHP methods for IP address calculation.
 
-## 1. Convert CIDR to netmask
+#### Convert CIDR to netmask
 
-Slash notation is beautifully simple, but some things just insist on netmasks. e.g. 21 = 255.255.248.0
+Slash notation is beautifully simple, but sometimes you need the netmask e.g. 21 = 255.255.248.0
 
 ```php
 public function cidr2netmask($cidr)
-    {
-        for( $i = 1; $i <= 32; $i++ )
-        $bin .= $cidr >= $i ? '1' : '0';
+{
+        for ($i = 1; $i <= 32; $i++) {
+            $bin .= $cidr >= $i ? '1' : '0';
+        }
 
         $netmask = long2ip(bindec($bin));
 
-        if ( $netmask == "0.0.0.0")
-        return false;
+        if ( $netmask == "0.0.0.0") {
+            return false;
+        }
 
     return $netmask;
-    }
+}
 ```
 
-## 2. Get network address from cidr subnet
+#### Get network address from CIDR
 
 If you know the IP and the subnet size, but whats the network address? e.g. 10.0.2.56/21 = 10.0.0.0
 
 ```php
 public function cidr2network($ip, $cidr)
- {
+{
     $network = long2ip((ip2long($ip)) & ((-1 << (32 - (int)$cidr))));
     return $network;
 }
 ```
 
-## 3. Convert netmask to CIDR
+#### Convert netmask to CIDR
 
 Got a netmask, but require slash notation? e.g. 255.255.255.128 = 25
 
@@ -74,7 +76,7 @@ public function netmask2cidr($netmask)
 }
 ```
 
-## 4. Is IP address in subnet?
+#### Is IP address in subnet?
 
 e.g. is 10.5.21.30 in 10.5.16.0/20 == true, is 192.168.50.2 in 192.168.30.0/23 == false
 
@@ -91,7 +93,7 @@ public function cidr_match($ip, $network, $cidr)
 
 ## The CIDR PHP class
 
-And for completeness, here is the full class.
+The above wrapped in a class.
 
 ```php
 class cidr
