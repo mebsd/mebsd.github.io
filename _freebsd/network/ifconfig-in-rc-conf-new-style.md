@@ -18,7 +18,7 @@ tags:
   - ifconfig
   - network
 ---
-# FreeBSD: New improved rc.conf syntax for IPv4 ifconfig alias
+# New rc.conf syntax for IPv4 ifconfig alias
 
 _This page used to document to use of, ipv4\_addrs\_<interface>, which is now depreciated. The functionality has been integrated into ifconfig\_<IF>\_alias. <a href="http://svnweb.freebsd.org/base/head/share/man/man5/rc.conf.5?r1=251584&#038;r2=252015" target="_blank">See SVN diff</a>_
 

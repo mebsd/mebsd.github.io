@@ -14,6 +14,8 @@ tags:
   - freebsd-update
   - upgrade openssl package
 ---
+# OpenSSL Upgrade
+
 With the base install of FreeBSD you get a copy on OpenSSL installed in `/usr/bin/openssl`, however it is not a registered package. This makes upgrading OpenSSL a little different, you must first install the OpenSSL port and then tell your make.conf to use the port install when using OpenSSL libraries. Once this is done you can keep OpenSSL up to date just as you would with any other port.
 
 First make sure your port tree is up to date

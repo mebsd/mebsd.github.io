@@ -16,7 +16,7 @@ tags:
   - code
   - programming
 ---
-# C Programming: do while loop countdown
+# do while loop countdown
 
 #### Quote from The C Programming Language, Second Edition by Brian W. Kernighan & Dennis M. Ritchie
 

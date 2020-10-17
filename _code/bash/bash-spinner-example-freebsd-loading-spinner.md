@@ -16,7 +16,8 @@ tags:
   - code
   - shell script
 ---
-# Bash spinner example - FreeBSD loading spinner
+# Bash spinner example
+## FreeBSD loading spinner
 
 As most FreeBSD users have probably noticed, when booting the FreeBSD kernel a crazy spinner animates to let you know the system is doing something. This please wait spinner looks pretty fun and is nice to use for your own scripts that run in the foreground for a while, so the use knows something is happening.
 

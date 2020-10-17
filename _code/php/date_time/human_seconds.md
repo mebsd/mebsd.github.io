@@ -4,7 +4,8 @@ layout: default
 parent: Date/Time
 grand_parent: PHP
 ---
-## Convert number of seconds to human readable string
+# Human Readable Seconds
+## Convert number of seconds to human readable format
 
 ```php
 <?php

@@ -1,6 +1,6 @@
 ---
 id: 585
-title: 'IPv6 Regexp'
+title: 'Short IPv6 Regexp'
 date: 2012-02-11T14:23:28+00:00
 author: Jake
 layout: default
@@ -19,7 +19,8 @@ tags:
   - programming
   - regex
 ---
-# IPv6: Short IPv6 Regexp - PHP preg_match() example
+# Short IPv6 Regexp 
+## PHP preg_match() example
 
 #### IPv6 Regexp:
 

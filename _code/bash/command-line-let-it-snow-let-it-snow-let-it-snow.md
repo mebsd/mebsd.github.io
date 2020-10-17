@@ -16,7 +16,8 @@ tags:
   - cli
   - code
 ---
-# Command line - Let it snow, Let it snow, Let it snow
+# Command line snow
+## Let it snow, Let it snow, Let it snow
 
 
 Do you want to make your bash terminal snow? Here is a fun little way to do that using awk.

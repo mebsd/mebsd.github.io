@@ -16,7 +16,7 @@ tags:
   - code
   - programming
 ---
-# C Programming - Inches to centimeters
+# Inches to centimeters
 
 This is an example of how to convert Inches to cm (Inches to centimeters) using the C programming language, 1 inch = 2.54 cm.
 

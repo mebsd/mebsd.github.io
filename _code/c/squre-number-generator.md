@@ -15,7 +15,7 @@ tags:
   - c programming
   - programming
 ---
-# C Programming: Square number generator
+# Square number generator
 
 This is an example of how to square numbers using a simple function in the C programming language.
 

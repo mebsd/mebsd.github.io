@@ -20,7 +20,8 @@ tags:
   - pkgng
   - ports
 ---
-# pkgng: First look at FreeBSD's new package manager
+# pkgng: First look 
+## FreeBSD's new package manager
 
 FreeBSD has been long due a better package management system, `pkg\_add`, `pkg\_info`, etc just doesn't cut it any more. For a long time GNU/linux users have always used this as a reason not to use FreeBSD and instead favour some GNU/linux combination with an all encompassing easy to use package manager, such as Debian's apt-get. FreeBSD's response has always been, (not actual quote), "We have the ports collection, which is cooler and more flexible than just having some easy to use package manager. You can always do it yourself by writing scripts around the pkg_* tools or using portmaster's --packages-only option". While this is all true, there is still a gap for a good package manager that needs filling. So here comes pkgng (pkg: (next|new) generation), this is FreeBSD's next generation package manager <del datetime="2012-08-30T21:01:06+00:00">and although still in beta, with a few features missing</del>, it is very nice. 
 

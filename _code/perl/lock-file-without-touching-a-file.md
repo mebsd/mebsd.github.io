@@ -1,6 +1,6 @@
 ---
 id: 327
-title: 'Perl lock file - without touching a file'
+title: 'Perl lock file'
 date: 2011-11-16T13:37:12+00:00
 author: Jake
 layout: default
@@ -17,7 +17,8 @@ tags:
   - programming
   - shell script
 ---
-# Perl lock file - without touching a file
+# Perl lock file
+## without touching a file
 
 If you have any scripts in your crontab that are run regularly but sometimes run for too long and end up running twice you need something like a lock file/pid file. This can get messy if scripts crash, servers reboot, etc and the lock file doesn't get remove and - oh no - the script hasn't been running all day...
 

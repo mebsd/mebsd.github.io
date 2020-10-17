@@ -18,7 +18,7 @@ tags:
   - ifconfig
   - network
 ---
-# FreeBSD ifconfig shutdown: Physical link down
+# FreeBSD ifconfig shutdown
 
 When you **ifconfig down** an interface in FreeBSD it is virtually disabled, that is to say, it stops passing traffic but the physical link (layer 1) remains up. The absence of the physical link down is a shame. There are some good uses for this feature, for example, if have a FreeBSD server directly connected to a (cisco) router and only want the routes announced if the port is up. Maybe you would like to force the route to fail over to a backup server by running a command on the FreeBSD server. With the following patch this is now possible for **em(4)** interfaces.
 
