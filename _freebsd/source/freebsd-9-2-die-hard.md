@@ -21,8 +21,8 @@ Love Die Hard? Check out FreeBSD 9.2 Die Hard tribute as a fun new beastie in th
 ## The CEO Workstation - Nakatomi Socrates
 
 
-![FreeBSD 9 Nakatomi Socrates](/wp-content/uploads/2013/09/freebsd9.png){:class="img-responsive"}
-![FreeBSD 9.2 Nakatomi Socrates](/wp-content/uploads/2013/09/freebsd92.png){:class="img-responsive"}
+![FreeBSD 9 Nakatomi Socrates](/assets/images/freebsd/zfs/freebsd9.png){:class="img-responsive"}
+![FreeBSD 9.2 Nakatomi Socrates](/assets/images/freebsd/zfs/freebsd92.png){:class="img-responsive"}
 
 <blockquote class="twitter-tweet">
   <p>
@@ -111,5 +111,5 @@ Love Die Hard? Check out FreeBSD 9.2 Die Hard tribute as a fun new beastie in th
 ```
 
 Although, this probably wont be the default in 9.2 RELEASE, maybe this one will&#8230;  
-![FreeBSD 9.2 Die Hard Nakatomi Socrates](/wp-content/uploads/2013/09/freebsd9-pre.png){:class="img-responsive"}
-![FreeBSD 9.2 Die Hard Nakatomi Socrates](/wp-content/uploads/2013/09/freebsd92-pre.png){:class="img-responsive"}
+![FreeBSD 9.2 Die Hard Nakatomi Socrates](/assets/images/freebsd/zfs/freebsd9-pre.png){:class="img-responsive"}
+![FreeBSD 9.2 Die Hard Nakatomi Socrates](/assets/images/freebsd/zfs/freebsd92-pre.png){:class="img-responsive"}

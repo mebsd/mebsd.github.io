@@ -6,7 +6,6 @@ author: Jake
 layout: default
 guid: http://www.mebsd.com/?p=408
 permalink: /freebsd-security-hardening/protecting-freebsd-with-sysctl-101.html
-image: /wp-content/uploads/2011/11/trustyteenie2.png
 parent: Security
 grand_parent: freebsd
 categories:

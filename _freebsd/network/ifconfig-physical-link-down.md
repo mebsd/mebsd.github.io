@@ -7,8 +7,6 @@ layout: default
 guid: https://mebsd.com/?p=1139
 permalink: /make-build-your-freebsd-word/ifconfig-physical-link-down.html
 parent: Network
-grand_parent: freebsd
-image: /wp-content/uploads/2012/12/hartingrj-industrial_-rj45-700.jpg
 categories:
   - Build Your FreeBSD World
   - Configure FreeBSD
@@ -18,9 +16,9 @@ tags:
   - ifconfig
   - network
 ---
-# FreeBSD ifconfig shutdown
+## FreeBSD ifconfig shutdown
 
-When you **ifconfig down** an interface in FreeBSD it is virtually disabled, that is to say, it stops passing traffic but the physical link (layer 1) remains up. The absence of the physical link down is a shame. There are some good uses for this feature, for example, if have a FreeBSD server directly connected to a (cisco) router and only want the routes announced if the port is up. Maybe you would like to force the route to fail over to a backup server by running a command on the FreeBSD server. With the following patch this is now possible for **em(4)** interfaces.
+When you `ifconfig down` an interface in FreeBSD it is virtually disabled, that is to say, it stops passing traffic but the physical link (layer 1) remains up. The absence of the physical link down is a shame. There are some good uses for this feature, for example, if have a FreeBSD server directly connected to a (cisco) router and only want the routes announced if the port is up. Maybe you would like to force the route to fail over to a backup server by running a command on the FreeBSD server. With the following patch this is now possible for **em(4)** interfaces.
 
 The patch I've tested is for use with **em(4)** interfaces, below I have also included a patch for **igb(4)** interfaces but I have not tested this one.
 
@@ -263,7 +261,7 @@ Now it's time to test the command.
 
 Check the port status on the other side of the link, or look at the lights on the back of the server ;) and you should see the interface shutdown.
 
-**N.B.** If there is absolutely no configuration on the **em(4)** interface the **ifconfig down** command will have no affect. If this is the case, just set an arbitrary IP address on the interface, or an **ifconfig up** might do it, then retest.
+**N.B.** If there is absolutely no configuration on the **em(4)** interface the `ifconfig down` command will have no affect. If this is the case, just set an arbitrary IP address on the interface, or an `ifconfig up` might do it, then retest.
 
 In case you're looking for it here is the (untested by me) patch of **igb(4)** interfaces.
 

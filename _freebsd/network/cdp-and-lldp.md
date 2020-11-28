@@ -20,7 +20,7 @@ tags:
   - monitoring system
   - network
 ---
-## CDP and LLDP with ladvd
+### CDP and LLDP with ladvd
 
 On a large network with many switches and routers all over the place it can get messy when trying to keep track of all you kit plugged into it. If the kit your looking for is a Cisco you can use CDP (Cisco Discovery Protocol) to advertise the link and general host information to the Cisco it's plugged into. There are many other link advertisement protocols around such as EDP, FDP etc, hopefully we are moving to a standard in the future (LLDP?). But back to CDP, what if that bit of kit isn't a cisco, what if it's a FreeBSD server (or maybe OpenBSD), how can you track it down?
 

@@ -10,7 +10,7 @@ tags:
   - cisco devices
   - network
 ---
-# Cisco `show run` vs `show run all` vs `more system:running config`
+# Cisco show run vs show run all vs more system:running config
 
 When viewing the running config on a Cisco IOS there are a few methods. The first is the well known `show run`, this will give you most of the configuration. However `show run` does hide the default configuration lines and encrypted keys. If you don`t want your configuration filtered there are some other methods.  
   

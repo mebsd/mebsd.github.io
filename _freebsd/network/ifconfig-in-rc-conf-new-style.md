@@ -1,6 +1,6 @@
 ---
 id: 306
-title: 'New rc.conf syntax IPv4 ifconfig alias'
+title: 'rc.conf ifconfig alias'
 date: 2015-03-02T15:39:19+00:00
 author: Jake
 layout: default
@@ -18,11 +18,12 @@ tags:
   - ifconfig
   - network
 ---
-# New rc.conf syntax for IPv4 ifconfig alias
+## rc.conf ifconfig alias
 
-_This page used to document to use of, ipv4\_addrs\_<interface>, which is now depreciated. The functionality has been integrated into ifconfig\_<IF>\_alias. <a href="http://svnweb.freebsd.org/base/head/share/man/man5/rc.conf.5?r1=251584&#038;r2=252015" target="_blank">See SVN diff</a>_
+> This page used to document to use of, `ipv4_addrs_<interface>`, which is now depreciated. The functionality has been integrated into `ifconfig_<interface>_alias`. [See SVN diff](http://svnweb.freebsd.org/base/head/share/man/man5/rc.conf.5?r1=251584&#038;r2=252015){:target="_blank"}
 
-Quote man page: **&#8220;Note that ipv4\_addrs\_<interface> variable was supported for IPv4 CIDR address notation. It is now deprecated because the functionality was integrated into ifconfig\_<interface>\_alias<n> though ipv4\_addrs\_<interface> is still supported for backward compatibility.&#8221;**
+#### Quote man page
+> Note that `ipv4_addrs_<interface>` variable was supported for IPv4 CIDR address notation. It is now deprecated because the functionality was integrated into `ifconfig_<interface>_alias<n>` though `ipv4_addrs_<interface>` is still supported for backward compatibility.
 
 #### This is an example of the new rc.conf syntax for configuring IPv4 addresses
 
@@ -30,7 +31,7 @@ Quote man page: **&#8220;Note that ipv4\_addrs\_<interface> variable was support
 ifconfig_fxp0_aliases="inet 192.168.0.1/24 inet 192.168.0.2-5/32"
 ```
 
-The above example will assign the IP address 192.168.0.1 with a netmask of 255.255.255.0 (/24). It will also add the aliases 192.168.0.2,192.168.0.3,..,192.168.0.5 with a netmask of 255.255.255.255 (/32).
+The above example will assign the IP address 192.168.0.1 with a netmask of 255.255.255.0. It will also add the aliases 192.168.0.2,192.168.0.3,192.168.0.4 and 192.168.0.5 with a netmask of 255.255.255.255.
 
 #### After rc is executed the output of **ifconfig fpx0** will look like this:
 

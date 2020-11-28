@@ -1,12 +1,9 @@
 ---
-id: 942
 title: 'FreeBSD: IPKVM with a RS232 serial cable'
 date: 2012-06-29T14:03:10+01:00
 author: Jake
 layout: default
-guid: http://www.mebsd.com/?p=942
 permalink: /cheat-sheets/unix-serial-console-kvm.html
-image: /wp-content/uploads/2012/06/IMG-20120629-00142.jpg
 categories:
   - Cheat Sheets
   - Configure FreeBSD
@@ -16,39 +13,13 @@ tags:
   - freebsd 9.0-RELEASE
   - freebsd server
 ---
+## FreeBSD: IPKVM with a RS232 serial cable
+
 One of the advantages of running a Unix operating system, such as FreeBSD, is the ability to setup a quick and cheap IPKVM between 2 servers with nothing more than a 9 pin RS232 DE9 serial cable. This post describes how to configure console redirection to a serial port providing access to the BIOS, boot menu, kernel, single and multi user boot levels.
 
 ### 1. Physical connection between servers.
 
 The first thing we need to do is connect the servers to each other using a female to female DE9 serial cable. I had a few of these sitting in a box, but if you need to buy one they cost very little, here is one from amazon <a title="Serial RS232 9 pin Connection Cable" href="http://www.amazon.co.uk/Serial-RS232-Connection-Cable-Female/dp/B00228GQCY" target="_blank">Serial RS232 9 pin Cable</a>.
-
-<table style="width: 100%; background-color: none; border: none; padding: 10px;">
-  <tr>
-    <td style="text-align: center;">
-      <a href="https://mebsd.com/wp-content/uploads/2012/06/IMG-20120629-00142.jpg" data-rel="lightbox-image-0" data-rl_title="" data-rl_caption="" title=""><img loading="lazy" class="size-thumbnail wp-image-932" style="border: 2px solid white;" title="Female to female DE9 serial cable" alt="" src="http://www.mebsd.com/wp-content/uploads/2012/06/IMG-20120629-00142-150x150.jpg" width="150" height="150" srcset="https://mebsd.com/wp-content/uploads/2012/06/IMG-20120629-00142-150x150.jpg 150w, https://mebsd.com/wp-content/uploads/2012/06/IMG-20120629-00142-160x160.jpg 160w" sizes="(max-width: 150px) 100vw, 150px" /></a></p> 
-      
-      <div style="color: #fff;">
-        RS232 9 pin Serial Cable
-      </div>
-    </td>
-    
-    <td style="text-align: center;">
-      <a href="https://mebsd.com/wp-content/uploads/2012/06/IMG-20120629-00150.jpg" data-rel="lightbox-image-1" data-rl_title="" data-rl_caption="" title=""><img loading="lazy" class="size-thumbnail wp-image-940" style="border: 2px solid white;" title="DE9 serial console server" alt="" src="http://www.mebsd.com/wp-content/uploads/2012/06/IMG-20120629-00150-150x150.jpg" width="150" height="150" srcset="https://mebsd.com/wp-content/uploads/2012/06/IMG-20120629-00150-150x150.jpg 150w, https://mebsd.com/wp-content/uploads/2012/06/IMG-20120629-00150-160x160.jpg 160w" sizes="(max-width: 150px) 100vw, 150px" /></a></p> 
-      
-      <div style="color: #fff;">
-        Server 1
-      </div>
-    </td>
-    
-    <td style="text-align: center;">
-      <a href="https://mebsd.com/wp-content/uploads/2012/06/IMG-20120629-00146.jpg" data-rel="lightbox-image-2" data-rl_title="" data-rl_caption="" title=""><img loading="lazy" class="size-thumbnail wp-image-936" style="border: 2px solid white;" title="DE9 serial cable connection" alt="" src="http://www.mebsd.com/wp-content/uploads/2012/06/IMG-20120629-00146-150x150.jpg" width="150" height="150" srcset="https://mebsd.com/wp-content/uploads/2012/06/IMG-20120629-00146-150x150.jpg 150w, https://mebsd.com/wp-content/uploads/2012/06/IMG-20120629-00146-160x160.jpg 160w" sizes="(max-width: 150px) 100vw, 150px" /></a></p> 
-      
-      <div style="color: #fff;">
-        Server 2
-      </div>
-    </td>
-  </tr>
-</table>
 
 ### 2. Enable console redirection in BIOS (optional)
 

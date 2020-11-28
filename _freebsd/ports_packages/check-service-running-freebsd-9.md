@@ -21,7 +21,7 @@ tags:
   - shell script
 ---
 
-# FreeBSD ensure all services are running
+## FreeBSD ensure all services are running
 
 The FreeBSD rc system makes it very simple to check and control services. With the addition of the `service` command you can easily list enabled services. This script ensures all services are running. It uses `service -e` to get enabled services, if rc status reports service is not running, start it.
 

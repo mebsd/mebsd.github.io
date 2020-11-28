@@ -16,7 +16,7 @@ tags:
   - partition full
   - UAMP
 ---
-# Move /var to /usr/var
+## Move /var to /usr/var
 
 Moving the `/var` partition to `/usr/var` can be a very good KISS technique for maintaining your FreeBSD filesystem. If you installed FreeBSD using the auto partition disk label in sysinstall you will have a separate `/var` partition of a fixed size. This can be quite undesirable, if for example, you are setting up a LAMP server (or UAMP, if you don't like getting lumped with Linux users) for a customer who doesn't  yet know how they are going to be using their available disk space. It could be used up mainly with mail, web data, or MySQL databases, so we want to have the flexibility of any of these being able to use as much of the disk as they need.
 

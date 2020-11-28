@@ -16,20 +16,14 @@ tags:
   - freebsd-update
   - upgrade openssl package
 ---
-# Update FreeBSD and Ports with portmaster
-
-Recent talks on FreeBSD-Ports lists have been about whether [portupgrade](http://www.mebsd.com/man/portupgrade/1 "man portupgrade") should be shown the door, [portmaster](http://www.mebsd.com/man/portmaster/8 "man portmaster") seems to be the new way to go.
-
-<http://lists.freebsd.org/pipermail/freebsd-ports/2011-July/068887.html>
-
-I still quite like [portupgrade](http://www.mebsd.com/man/portupgrade/1 "man portupgrade") for some reasons but I would rather play it safe and jump on to [portmaster](http://www.mebsd.com/man/portmaster/8 "man portmaster") before [portupgrade](http://www.mebsd.com/man/portupgrade/1 "man portupgrade") sinks. In an old post I gave an example shell script that would run and bunch of stuff to update FreeBSD, in that script I used [portupgade](http://www.mebsd.com/man/portupgrade/1 "man portupgrade"), this is the revised script using [portmaster](http://www.mebsd.com/man/portmaster/8 "man portmaster").
+## Update FreeBSD and Ports with portmaster
 
 First make sure you have the following installed
 
-  * [freebsd-update](http://www.mebsd.com/man/freebsd-update/8 "man freebsd-update") (this is installed as default)
-  * [portsnap](http://www.mebsd.com/man/portsnap/8 "man portsnap") (should also be installed as default)
-  * [portmaster](http://www.mebsd.com/man/portmaster/8 "man portmaster") (/usr/ports/ports-mgmt/portmaster)
-  * [portaudit](http://www.mebsd.com/man/portaudit/1 "man portaudit") (/usr/ports/ports-mgmt/portaudit)
+  * `freebsd-update` (this is installed as default)
+  * `portsnap` (should also be installed as default)
+  * `portmaster` (/usr/ports/ports-mgmt/portmaster)
+  * `portaudit` (/usr/ports/ports-mgmt/portaudit)
 
 ```sh
 #!/bin/sh

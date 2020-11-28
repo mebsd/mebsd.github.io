@@ -18,9 +18,9 @@ tags:
   - gpt
   - max partition size
 ---
-With disk sizes these days there is a good chance you are going to want to make some mega big partition using a several 2TB disks in some RAID configuration. Fdisk is not overly happy about this, and will restrict us to about 2TB partition even though we have many more sectors that could be used.
+## UFS partitions over 2Tb
 
-See this [quote](http://www.freebsd.org/projects/bigdisk/index.html)
+With disk sizes these days there is a good chance you are going to want to make some mega big partition using a several 2TB disks in some RAID configuration. Fdisk is not overly happy about this, and will restrict us to about 2TB partition even though we have many more sectors that could be used.
 
 > The UFS2 filesystem was introduced in 2003 as a replacement to the original UFS and provides 64 bit counters and offsets. This allows for files and filesystems to grow to `2^73 bytes (2^64 * 512)` in size and hopefully be sufficient for quite a long time. UFS2 largely solved the storage size limits imposed by the filesystem. Unfortunately, many tools and storage mechanisms still use or assume 32 bit values, often keeping FreeBSD limited to 2TB.
 

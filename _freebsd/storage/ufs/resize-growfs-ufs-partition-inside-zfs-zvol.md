@@ -20,7 +20,7 @@ tags:
   - storage
   - ZFS
 ---
-# Resize growfs UFS partition inside ZFS zvol
+## Resize growfs UFS partition inside ZFS zvol
 
 In ZFS there is a very useful feature for creating a raw block devices, that can be used just like a physical hard drive for just about anything.
 

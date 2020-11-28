@@ -1,6 +1,6 @@
 ---
 id: 319
-title: FreeBSD mergemaster non-interactive mode
+title: mergemaster non-interactive mode
 date: 2011-11-15T23:34:31+00:00
 author: Jake
 layout: post
@@ -17,9 +17,12 @@ tags:
   - freebsd-stable
   - freebsd-update
 ---
-Finally all the make buildworld, make buildkernel, make installkernel, reboot, make install world milarky is done, it is now time to run the latest FreeBSD stable. But wait &#8211; don&#8217;t forget the mergemaster&#8230;
+## FreeBSD mergemaster non-interactive mode
 
-<pre class="console-text notranslate"># mergemaster -i
+Finally all the make buildworld, make buildkernel, make installkernel, reboot, make install world milarky is done, it is now time to run the latest FreeBSD stable. But wait, don't forget the mergemaster!
+
+```sh
+# mergemaster -i
 
 *** Creating the temporary root environment in /var/tmp/temproot
  *** /var/tmp/temproot ready for use
@@ -54,18 +57,21 @@ Finally all the make buildworld, make buildkernel, make installkernel, reboot, m
 
   Default is to leave the temporary file to deal with by hand
 
-How should I deal with this? [Leave it for later]</pre>
+How should I deal with this? [Leave it for later]
+```
 
-Hmmm only the header is changed (as you would expect), I know I&#8217;ve not modified this file, yet I still need to press &#8216;i&#8217; and [enter] for each one. This could take some time, but I want to make sure no files I need are overwritten. Do I really have to check each diff?
+Hmmm only the header is changed (as you would expect), I know I've not modified this file, yet I still need to press &#8216;i' and [enter] for each one. This could take some time, but I want to make sure no files I need are overwritten. Do I really have to check each diff?
 
-Nooo! Thank goodness, we have a flag for that&#8230; #man mergemaster&#8230;
+Nooo! Thank goodness, we have a flag for that `man mergemaster`
 
-<pre class="console-text notranslate">-U          Attempt to auto upgrade files that have not been user modi-
-                 fied.</pre>
+```
+-U          Attempt to auto upgrade files that have not been user modified.
+```
 
-So any file witch I have not messed with will be automatically patched and I can just worry about my random ones, sometimes I still get asked about changes in files that are custom to my build machine, but it&#8217;s so much better!
+So any file witch I have not messed with will be automatically patched and I can just worry about my random ones, sometimes I still get asked about changes in files that are custom to my build machine, but it's so much better!
 
-<pre class="console-text notranslate"># mergemaster -iU
+```sh
+# mergemaster -iU
 
 *** Creating the temporary root environment in /var/tmp/temproot
  *** /var/tmp/temproot ready for use
@@ -112,6 +118,5 @@ So any file witch I have not messed with will be automatically patched and I can
 -##### built by root@farrell.cse.buffalo.edu
 -##### in /usr/obj/usr/src/etc/sendmail
 
-... etc ...</pre>
-
-I am happy to have a faster, less interactive, FreeBSD Stable build procedure. :)
+... etc ...
+```
