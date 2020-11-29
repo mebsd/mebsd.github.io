@@ -1,11 +1,10 @@
 ---
-id: 161
-title: 'Rsync over SSH - Keeping file ownerships and permissions'
+title: 'Keeping ownerships and permissions'
 date: 2010-12-20T19:03:41+00:00
 author: Jake
 layout: default
-guid: http://www.mebsd.com/?p=161
 permalink: /cli-commands/rsync-over-ssh-keeping-file-ownerships-and-permissions.html
+parent: Rsync
 categories:
   - Commands
   - Network Commands
